@@ -261,7 +261,7 @@ nav ul li:hover::after {
 /* Responsive Design for Extra Small Devices (less than 576px) */
 @media (max-width: 375px) {
     h1 {
-        font-size: 2em; /* Set a minimum font size for extra small screens */
+        font-size: 3em; /* Set a minimum font size for extra small screens */
         line-height: 1.2; /* Adjust line height for improved readability */
         letter-spacing: 0; /* Keep letter spacing consistent */
        
