@@ -1,0 +1,560 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(rgb(22, 22, 22) 2px, transparent 1px), 
+                      linear-gradient(90deg, rgb(22, 22, 22) 2px, transparent 1px);
+    background-size: 68px 70px; /* Size of the grid squares */
+}
+/* Make fonts and grid responsive for larger screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        background-size: 100px 100px; /* Adjust grid size for larger screens */
+    }
+}
+
+/* For tablets */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        background-size: 60px 60px;
+        padding: 15px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        background-size: 40px 40px; /* Adjust grid size for smaller screens */
+        padding: 10px;
+    }
+}
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo img {
+    width: 150px;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+    .logo img {
+        width: 120px; /* Reduce logo size */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        padding: 10px 20px;
+    }
+    .logo img {
+        width: 100px; /* Further reduce logo size */
+        margin-bottom: 10px; /* Add space below the logo */
+    }
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the navigation on larger screens */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "+";  /* Add a "+" symbol */
+    margin-left: 5px; /* Add some space between the text and the "+" symbol */
+    font-size: 14px; /* Adjust the size of the "+" symbol */
+    color: white; /* Adjust the color of the "+" symbol */
+}
+
+nav ul li:nth-child(1) a::after,  /* Home */
+nav ul li:nth-child(3) a::after,  /* Pages */
+nav ul li:nth-child(4) a::after,  /* Services */
+nav ul li:nth-child(5) a::after,  /* Projects */
+nav ul li:nth-child(6) a::after { /* Blogs */
+    content: "+"; /* Only these elements will have the "+" */
+}
+
+nav ul li:nth-child(2) a::after,  /* About Us */
+.search-bar a::after {
+    content: ""; /* No "+" for these */
+}
+
+nav ul li a:hover {
+    color: #4EE69C;
+}
+
+nav ul li a:hover::after {
+    color: #4EE69C;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #4EE69C;
+    transition: width 0.2s ease;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add vertical margin between items */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Slightly reduce font size */
+    }
+
+    nav ul li a::after {
+        font-size: 12px; /* Adjust the plus icon size */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Reduce margin between items */
+    }
+
+    nav ul li a {
+        font-size: 13px; /* Further reduce font size */
+    }
+
+    nav ul li a::after {
+        font-size: 13px; /* Adjust the plus icon size */
+    }
+
+    nav ul li:hover::after {
+        width: 80%; /* Adjust hover effect for smaller screens */
+    }
+}
+
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+    background-color: #4EE69C;
+    border-radius: 50%;
+    padding-left: 10px;
+}
+@media (max-width: 768px) {
+    .menu-icon img {
+        width: 40px;
+        height: 40px;
+        padding-left: 8px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .menu-icon img {
+        width: 30px;
+        height: 30px;
+        padding-left: 5px;
+    }
+}
+
+
+
+.hero-section {
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    padding-top: 70px;
+  }
+  /* Medium Devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px; /* Reduced padding for smaller screens */
+        padding-top: 60px; /* Adjust top padding */
+    }
+}
+
+/* Small Devices (phones, 576px and up) */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 30px; /* Further reduced padding */
+        padding-top: 50px; /* Further adjust top padding */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Extra Small Devices (less than 576px) */
+@media (max-width: 375px) {
+    .hero-section {
+        padding: 20px; /* Minimum padding */
+        padding-top: 40px; /* Minimum top padding */
+        font-size: 0.9rem; /* Further adjust font size */
+    }
+}
+
+  h1 {
+    font-size: 8em;
+    line-height: 1;
+    letter-spacing: -2px;
+    text-align: left;
+    position: relative;
+  }
+  /* Responsive Design for Medium Devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5em; /* Decrease font size for medium screens */
+        letter-spacing: -1px; /* Slightly adjust letter spacing */
+    }
+}
+
+/* Responsive Design for Small Devices (phones, 576px and up) */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3em; /* Further decrease font size for small screens */
+        line-height: 1.2; /* Adjust line height for improved readability */
+        letter-spacing: 0; /* Adjust letter spacing for better readability */
+    }
+}
+
+/* Responsive Design for Extra Small Devices (less than 576px) */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 2em; /* Set a minimum font size for extra small screens */
+        line-height: 1.2; /* Adjust line height for improved readability */
+        letter-spacing: 0; /* Keep letter spacing consistent */
+       
+    }
+}
+  .web-word {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* Responsive Design for Medium Devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .web-word {
+        font-size: 1.5em; /* Decrease font size for medium screens */
+        padding: 4px; /* Adjust padding */
+    }
+}
+
+/* Responsive Design for Small Devices (phones, 576px and up) */
+@media (max-width: 576px) {
+    .web-word {
+        font-size: 1em; /* Further decrease font size for small screens */
+        line-height: 1.2; /* Adjust line height for improved readability */
+        padding: 3px; /* Adjust padding */
+    }
+}
+
+/* Responsive Design for Extra Small Devices (less than 576px) */
+@media (max-width: 375px) {
+    .web-word {
+        font-size: 1em; /* Set a minimum font size for extra small screens */
+        padding: 2px; /* Keep padding consistent */
+    }
+}
+
+  
+.image-row {
+    display: inline-flex; /* Use flexbox for layout */
+    justify-content: left; /* Align items to the left */
+    gap: 10px; /* Space between images */
+    margin-left: -30px; /* Negative margin for alignment, but adjust in media queries */
+    vertical-align: middle; /* Align vertically with other elements */
+    margin-top: -150px; /* Adjust top margin */
+}
+
+/* Responsive Design for Image Row */
+@media (max-width: 768px) {
+    .image-row {
+        margin-left: -20px; /* Adjust margin for medium screens */
+        margin-top: -100px; /* Adjust margin for medium screens */
+        justify-content: center; /* Center images for better alignment */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-row {
+        flex-wrap: wrap; /* Allow images to wrap to next line */
+        margin-left: 0; /* Reset margin for small screens */
+        margin-top: -10px; /* Adjust margin for small screens */
+    }
+}
+
+.image-item {
+    width: 200px; /* Base width for images */
+    height: 85px; /* Base height for images */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    border-radius: 50px; /* Rounded corners */
+}
+
+/* Responsive Design for Image Items */
+@media (max-width: 768px) {
+    .image-item {
+        width: 150px; /* Decrease width for medium screens */
+        height: 65px; /* Decrease height for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-item {
+        width: 120px; /* Further decrease width for small screens */
+        height: 55px; /* Further decrease height for small screens */
+    }
+
+    .image-item--large {
+        width: 200px; /* Adjust large item width for small screens */
+    }
+}
+
+.image-item--large {
+    width: 330px; /* Base width for large images */
+}
+
+/* Adjust for image item with the large class */
+@media (max-width: 768px) {
+    .image-item--large {
+        width: 250px; /* Decrease large item width for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-item--large {
+        width: 180px; /* Further adjust large item width for small screens */
+    }
+}
+
+.image-item img {
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    object-fit: cover; /* Cover the image container without distortion */
+}
+
+.agency-heading {
+    margin-top: -150px; /* Adjust this value to control spacing */
+    padding-top: 0; /* Reset padding */
+}
+
+/* Responsive Design for Agency Heading */
+@media (max-width: 768px) {
+    .agency-heading {
+        margin-top: -100px; /* Adjust margin for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .agency-heading {
+        margin-top: -50px; /* Adjust margin for small screens */
+        font-size: 3em;
+    }
+}
+
+  .circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 40px solid transparent;
+    border-top-color:  #55E6A5; /* Adjust the color to match the image */
+    border-left-color:  #55E6A5; /* Adjust the color to match the image */
+    transform: translate(-50%, -50%) rotate(-4deg); /* Centers the circle */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%; /* Rotate around the center of the arrow */
+    animation: rotateCircle 10s linear infinite; /* Add animation for continuous rotation */
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg); /* Initial rotation */
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg); /* Rotate counterclockwise */
+    }
+}
+
+/* Responsive adjustments for larger tablets and screens up to 1024px */
+@media (max-width: 1024px) {
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-width: 30px;
+    }
+}
+
+/* Responsive adjustments for tablets and screens up to 768px */
+@media (max-width: 768px) {
+    .circle {
+        width: 80px;
+        height: 80px;
+        border-width: 20px;
+    }
+}
+
+/* Responsive adjustments for very small mobile phones up to 480px */
+@media (max-width: 480px) {
+    .circle {
+        width: 60px;
+        height: 60px;
+        border-width: 10px;
+    }
+}
+
+/* Base styling for the arrow */
+.arrow {
+    position: absolute;
+    width: 40%; /* Initial width as a percentage of the parent container */
+    top: 84%;
+    left: 65%;
+    transform: translate(-50%, -50%); /* Center the arrow */
+    /* Add arrow content like an image or SVG here */
+}
+
+
+/* Responsive adjustments for larger tablets and screens up to 1024px */
+@media (max-width: 1024px) {
+    .arrow {
+        width: 25%; /* Reduce width for larger tablets */
+        top: 70%; /* Adjust vertical position */
+        left: 75%; /* Adjust horizontal position */
+    }
+}
+
+/* Responsive adjustments for tablets and screens up to 768px */
+@media (max-width: 768px) {
+    .arrow {
+        width: 20%; /* Further reduce width for smaller tablets */
+        top: 60%; /* Adjust vertical position */
+        left: 80%; /* Adjust horizontal position */
+    }
+}
+
+/* Responsive adjustments for very small mobile phones up to 480px */
+@media (max-width: 480px) {
+    .arrow {
+        width: 55%; /* Slightly increase width for small screens */
+        top: 85%; /* Adjust vertical position */
+        left: 70%; /* Adjust horizontal position */
+        margin-left: 9%;
+        
+    }
+}
+/* Base styling for the arrow image */
+.arrow-img {
+    width: 100%; /* Ensure the image scales with its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments for larger tablets and screens up to 1024px */
+@media (max-width: 1024px) {
+    .arrow-img {
+        max-width: 80%; /* Adjust the max-width for tablets */
+    }
+}
+
+/* Responsive adjustments for tablets and screens up to 768px */
+@media (max-width: 768px) {
+    .arrow-img {
+        width: 120%; /* Further adjust for smaller tablets */
+    }
+}
+
+/* Responsive adjustments for very small mobile phones up to 480px */
+@media (max-width: 480px) {
+    .arrow-img {
+        width: 80%; /* Adjust for very small screens */
+    }
+}
+.video-area-two {
+    text-align: center; /* Center the video section */
+    padding: 20px; /* Add some padding */
+}
+
+.video-part {
+    position: relative; /* Allows positioning of the play button */
+}
+
+.video-part img {
+    width: 100%; /* Make images responsive */
+    height: 40%; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 50%;
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:#55E6A5; /* Button text color */
+    font-size: 24px; /* Icon size */
+    box-shadow: 0 4px 10px #55E6A5(0, 0, 0, 0.5); /* Shadow for the button */
+    transition: transform 0.3s, background-color 0.3s; /* Animation */
+}
+
+.video-play:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge on hover */
+    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .video-part img {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-part img {
+        max-width: 100%; /* Full width on mobile */
+    }
+}
