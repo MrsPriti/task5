@@ -510,6 +510,7 @@ nav ul li:hover::after {
 .video-area-two {
     text-align: center; /* Center the video section */
     padding: 20px; /* Add some padding */
+    background-color: black;
 }
 
 .video-part {
@@ -556,5 +557,214 @@ nav ul li:hover::after {
 @media (max-width: 480px) {
     .video-part img {
         max-width: 100%; /* Full width on mobile */
+    }
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+}
+/* Small devices (up to 576px, like phones) */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Medium devices (up to 768px, like tablets) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Adjust padding for medium screens */
+    }
+}
+
+/* Large devices (up to 992px, like smaller laptops) */
+@media (max-width: 992px) {
+    .container {
+        padding: 20px; /* Keep larger padding for bigger screens */
+    }
+}
+
+/* Extra large devices (1200px and above, like desktops) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Keep a max-width on larger screens */
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding: 15px;
+}
+/* Responsive Design for Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    .col-lg-6 {
+        flex: 0 0 100%; /* Each column takes up 100% of the row on smaller screens */
+        max-width: 100%; /* Allow the column to fill the row */
+    }
+}
+
+/* Responsive Design for Small Devices (Phones) */
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column; /* Stack the two columns vertically */
+        align-items: center; /* Center align the items */
+    }
+
+    .col-lg-6 {
+        flex: 0 0 100%; /* Make each column take up full width */
+        max-width: 100%; /* Ensure full width */
+        padding: 10px;
+        text-align: center; /* Center text on small screens */
+    }
+
+}
+
+
+/* Left Section Text */
+.client-text {
+    color: #B5B5B5;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 50px;
+    margin-top: 40px;
+}
+
+/* Logos */
+.client-logo-wrap {
+    display: flex;
+    gap: 100px;
+}
+
+.client-logo-item img {
+    width: 80px;
+    height: auto;
+    transition: filter 0.3s ease, cursor 0.3s ease; /* Smooth transition for hover effects */
+    filter: grayscale(100%) brightness(50%); /* Apply a greyscale filter with reduced brightness */
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+/* On hover, change to white and update the cursor style */
+.client-logo-item img:hover {
+    filter: brightness(0) invert(1); /* Converts image to white */
+    cursor: pointer; /* Changes the cursor to pointer to indicate interactivity */
+}
+/* Responsive Design */
+
+/* Medium screens (tablets, landscape phones) */
+@media (max-width: 992px) {
+    .client-text {
+        font-size: 16px; /* Reduce font size for better readability */
+        margin-top: 30px; /* Adjust margin for spacing */
+    }
+
+    .client-logo-wrap {
+        gap: 40px; /* Reduce gap between logos for medium screens */
+    }
+
+    .client-logo-item img {
+        width: 70px; /* Reduce logo size slightly for tablets */
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    .client-text {
+        font-size: 14px; /* Further reduce font size */
+        line-height: 1.6;
+        padding-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .client-logo-wrap {
+        gap: 50px; /* Further reduce gap between logos for small screens */
+        justify-content: space-around; /* Distribute logos evenly */
+    }
+
+    .client-logo-item img {
+        width: 60px; /* Further reduce logo size for phones */
+    }
+}
+
+.video-year {
+    font-size: 200px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 90px;
+    display: inline-block; /* Ensures the leaf can overlap correctly */
+}
+
+.year-text {
+    position: relative;
+    z-index: 1;
+    color: #000; /* Text fill color (black) */
+    
+    /* Text border using text-shadow */
+    text-shadow: 
+        1px 1px 0 #262626, 
+        -1px 1px 0 #262626, 
+        1px -1px 0 #262626, 
+        -1px -1px 0 #262626; /* Border color (#262626) */
+}
+
+.leaf-shape {
+    position: absolute;
+    top: 60%;
+    right: -10px; /* Adjust to move the leaf closer to the text */
+    transform: translate(30%, -50%); /* Adjust overlap based on positioning */
+    width: 100px;
+    z-index: 2; /* Ensure the leaf is above the year text */
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets, landscape phones) */
+@media (max-width: 992px) {
+    .video-year {
+        font-size: 150px; /* Adjust font size for tablets */
+        padding-left: 60px; /* Reduce padding */
+    }
+
+    .leaf-shape {
+        width: 80px; /* Reduce the size of the leaf */
+        right: -5px; /* Adjust positioning */
+        transform: translate(25%, -50%);
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    .video-year {
+        font-size: 100px; /* Further reduce font size for small screens */
+        padding-left: 40px; /* Further reduce padding */
+    }
+
+    .year-text {
+        font-size: 90px; /* Adjust year text size for mobile */
+    }
+
+    .leaf-shape {
+        width: 60px; /* Further reduce the size of the leaf */
+        right: 0px; /* Adjust leaf position closer to text */
+        transform: translate(20%, -50%);
     }
 }
