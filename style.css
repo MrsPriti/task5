@@ -1589,7 +1589,28 @@ blockquote p{
     justify-content: space-between;
     margin-top: 0%;
 }
+@media (max-width: 1200px) {
+    .footer {
+        padding: 30px;
+        background-size: 50px 52px; /* Smaller grid for medium screens */
+    }
+}
 
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+        background-size: 35px 36px; /* Smaller grid for small screens */
+        flex-direction: column; /* Ensure the layout remains vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+        background-size: 25px 26px; /* Compact grid for mobile screens */
+        flex-direction: column;
+    }
+}
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -1625,11 +1646,20 @@ blockquote p{
     padding: 10px 20px;
     background-color: #2cc593;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-top: 20px;
     text-decoration: none;
 }
-
+.contact-info  .support{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2cc593;
+    
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
 .quick-links, .services {
     flex: 1;
 }
@@ -1675,4 +1705,58 @@ blockquote p{
 
 .social-links a:hover {
     color: #2cc593;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        text-align: center;
+    }
+    
+    .contact-info, .quick-links, .services {
+        flex: unset; /* Remove flex properties for stacked layout */
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack footer bottom content vertically */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-info p, .footer-bottom p {
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .social-links a {
+        margin-left: 5px; /* Reduce spacing between social icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 1.5rem; /* Further reduce the font size for very small screens */
+    }
+
+    .contact-info p, .footer-bottom p {
+        font-size: 0.9rem; /* Smaller text for very small screens */
+    }
+
+    .contact-info .logo-img {
+        width: 50%; /* Make logo smaller for very small screens */
+    }
+
+    .contact-info .profile-img {
+        width: 30px; /* Reduce profile image size */
+        height: 30px;
+    }
+
+    .contact-info .phone-number {
+        padding: 8px 16px; /* Slightly smaller padding */
+    }
 }
