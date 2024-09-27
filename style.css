@@ -768,3 +768,911 @@ nav ul li:hover::after {
         transform: translate(20%, -50%);
     }
 }
+
+/* Container and Section Styling */
+.who-we-are {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #000; /* Dark background */
+    color: white;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subtitle2 {
+    color:#69d4ba;/* Green color */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.subtitle2 span {
+    display: inline-block;
+    height: 1px;
+    width: 50px;
+    background-color: #69d4ba; /* Green line */
+    margin-right: 10px;
+    position: relative;
+    top: -5px;
+}
+
+.team {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+   text-align: center;
+}
+
+/* Feature Section */
+.feature-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000; /* Dark section background */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;  /* Center align */
+    margin-right: auto; /* Center align */
+    margin-top: 5%;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.feature img {
+    display: inline-block;
+    width: 80px; /* Icon size */
+    margin-bottom: 20px;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(23%) saturate(643%) hue-rotate(115deg) brightness(92%);
+    transition: filter 0.3s ease; /* Smooth transition for the filter change */
+}
+
+.feature img:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%); /* Change the filter on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+.feature h2 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+   
+    color: white; 
+    border-bottom: 2px solid rgb(86, 85, 85);
+    transition: border-bottom-color 0.3s ease;
+    padding-bottom: 10px; /* Spacing for text */
+}
+.feature h2:hover {
+    border-bottom-color: white;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: #ccc; /* Light text color */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .feature-section {
+        flex-direction: column;
+    }
+    
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .team {
+        font-size: 36px;
+    }
+}
+
+
+.skills3-wrapper {
+    overflow: hidden; /* Hide the overflow content */
+    white-space: nowrap; /* Prevent wrapping of the text */
+    position: relative;
+    background-color: #66e0a3; /* Green background now applied here */
+    height: 130px; /* Set height for the container */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Vertically center the content */
+}
+
+.skills3 {
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    animation: scroll 20s linear infinite; /* Scroll the entire container */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all the way to the left */
+    }
+}
+
+.skill3 {
+    display: inline-block;
+    margin-right: 50px; /* Space between each skill */
+}
+
+.icon3 {
+    font-size: 5rem; /* Increase icon size */
+    font-weight: bold;
+    color: #000;
+    
+}
+
+
+.text3 {
+    font-size: 3rem; /* Adjust text size */
+    font-weight: normal;
+    color: #000;
+    align-items: center; /* Ensure the text aligns to the center */
+}
+
+@media (max-width: 1024px) {
+    .skills3-wrapper {
+        height: 110px; /* Reduce height */
+    }
+
+    .icon3 {
+        font-size: 4rem; /* Reduce icon size */
+    }
+
+    .text3 {
+        font-size: 2.5rem; /* Reduce text size */
+    }
+
+    .skill3 {
+        margin-right: 30px; /* Reduce space between each skill */
+    }
+
+    .skills3 {
+        animation: scroll 25s linear infinite; /* Speed up scrolling to adjust for reduced screen size */
+    }
+}
+@media (max-width: 768px) {
+    .skills3-wrapper {
+        height: 90px; /* Further reduce height */
+    }
+
+    .icon3 {
+        font-size: 3rem; /* Further reduce icon size */
+    }
+
+    .text3 {
+        font-size: 2rem; /* Further reduce text size */
+    }
+
+    .skill3 {
+        margin-right: 20px; /* Further reduce space between each skill */
+    }
+
+    .skills3 {
+        animation: scroll 20s linear infinite; /* Further speed up scrolling for smaller screen sizes */
+    }
+}
+@media (max-width: 480px) {
+    .skills3-wrapper {
+        height: 70px; /* Smallest height */
+    }
+
+    .icon3 {
+        font-size: 2.5rem; /* Smallest icon size */
+    }
+
+    .text3 {
+        font-size: 1.5rem; /* Smallest text size */
+    }
+
+    .skill3 {
+        margin-right: 15px; /* Smallest space between each skill */
+    }
+
+    .skills3 {
+        animation: scroll 15s linear infinite; /* Further speed up scrolling for extra small screens */
+    }
+}
+
+.profile-container12 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px; /* 40px for top/bottom, 20px for left/right */
+    background-color: #000;
+}
+/* Responsive for tablets (768px and below) */
+@media (max-width: 768px) {
+    .profile-container12 {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+        gap: 15px;
+    }
+}
+
+/* Responsive for mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .profile-container12 {
+        padding: 20px 10px;
+        gap: 10px;
+    }
+}
+
+.team-section {
+    background-color: black;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .heading-subtitle {
+    color: #00ff9c; /* Neon green color */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .heading-subtitle span {
+    position: relative;
+  }
+  
+  .heading-subtitle span::before {
+  
+    position: absolute;
+    left: -40px;
+    top: 0;
+    color: #00ff9c;
+    font-size: 24px;
+  }
+  
+  .main-heading {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .main-heading {
+      font-size: 32px;
+    }
+    .heading-subtitle {
+      font-size: 16px;
+    }
+    .heading-subtitle span::before {
+      font-size: 20px;
+      left: -35px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .main-heading {
+      font-size: 28px;
+    }
+    .heading-subtitle {
+      font-size: 15px;
+    }
+    .heading-subtitle span::before {
+      font-size: 18px;
+      left: -30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 24px;
+    }
+    .heading-subtitle {
+      font-size: 14px;
+    }
+    .heading-subtitle span::before {
+      font-size: 16px;
+      left: -25px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main-heading {
+      font-size: 20px;
+    }
+    .heading-subtitle {
+      font-size: 13px;
+    }
+    .heading-subtitle span::before {
+      font-size: 14px;
+      left: -20px;
+    }
+  }
+
+
+.profile-card12 {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    width: 230px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 110%;
+    height: 250px;
+    object-fit: cover;
+}
+
+h3 {
+    padding-top: 20px;
+    margin: 15px 0 10px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.arrow12 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.profile-card12:hover .arrow {
+    color: #00ff7f;
+}
+
+/* Hidden "View Details" text */
+.view-details {
+    position: absolute;
+    bottom: 10%; /* Adjust this to create space for the social icons below */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color:#000;
+    color: #3ae090;
+    padding: 10px 20px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    text-decoration: none; /* Initially no underline */
+}
+
+/* Make "View Details" visible on hover */
+.profile-card12:hover .view-details {
+    opacity: 1;
+    bottom: 20%;
+    text-decoration: underline; /* Add underline when visible */
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+    margin-top: 10px; /* Space between View Details and social icons */
+    position: absolute;
+    bottom: 5%; /* Position just below "View Details" */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    background-color: #000;
+}
+
+.social-icons i {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #3ae090; /* Color change on hover */
+}
+
+/* Show icons on hover */
+.profile-card12:hover .social-icons {
+    opacity: 1;
+}
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .profile-card12 {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .profile-img {
+        height: 200px;
+    }
+
+    h3 {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .view-details {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .social-icons i {
+        font-size: 16px;
+    }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .profile-card12 {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .profile-img {
+        height: 150px;
+    }
+
+    h3 {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .view-details {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .social-icons i {
+        font-size: 14px;
+    }
+}
+
+
+.stats-container {
+    display: flex; /* Change to flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-item {
+    flex: 1 1 200px; /* Allow items to grow and shrink, with a base size of 200px */
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.stat-item::before {
+    content: '✔';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px; /* Width of the circle */
+    height: 30px; /* Height of the circle */
+    border-radius: 50%; /* Make it a circle */
+    background-color:black;/* Background color of the circle */
+    border: 2px solid #00ff91; /* Add a green border around the circle */
+    color: #55e6a5; /* Change color of the checkmark to white for contrast */
+    font-size: 20px;
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.stat-number {
+    font-size: 90px;
+    font-weight: bold;
+    color: #000; /* Text fill color (black) */
+    
+    /* Text border using text-shadow */
+    text-shadow: 
+        1px 1px 0 #262626, 
+        -1px 1px 0 #262626, 
+        1px -1px 0 #262626, 
+        -1px -1px 0 #262626; /* Border color (#262626) */
+}
+
+.stat-text {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.stat-item:hover .stat-number {
+    color: #55e6a5;
+}
+
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
+}
+@media (max-width: 1024px) {
+    .testimonial-container {
+        padding: 40px;
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        padding: 30px;
+        max-width: 600px;
+        flex-direction: column; /* Stack content vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+
+.testimonial-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-image {
+    width: 100%; /* Adjust width according to your design */
+    max-width: 350px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0%; /* If you want it circular */
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .testimonial-left {
+        width: 60%; /* Slightly increase width on tablet */
+    }
+
+    .testimonial-image {
+        max-width: 300px; /* Decrease max width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-left {
+        width: 100%; /* Increase width on smaller screens */
+    }
+
+    .testimonial-image {
+        max-width: 250px; /* Further reduce image size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-left {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .testimonial-image {
+        max-width: 250px; /* Smaller image size on mobile */
+        border-radius: 100%; /* Make the image circular for a nicer effect */
+    }
+}
+
+
+.testimonial-right {
+    width: 50%;
+    padding-left: 30px;
+}
+
+blockquote p{
+    font-size: 1.6rem;
+    font-style:normal;
+    margin-bottom: 20px;
+    color:white;
+    line-height: 1.5;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-details h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.author-details p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.rating {
+    margin: 15px 0;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #00d585; /* Green color for stars */
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prev, .next {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.dots {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Adjust layout for mobile */
+@media (max-width: 768px) {
+    .testimonial-right {
+        width: 100%; /* Full width on mobile */
+        padding-left: 15px;
+    }
+
+    blockquote p {
+        font-size: 1.2rem; /* Smaller font size on mobile */
+    }
+
+    .author-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .author-details h4 {
+        font-size: 1rem;
+    }
+
+    .author-details p {
+        font-size: 0.8rem;
+    }
+
+    .star {
+        font-size: 1.2rem;
+    }
+
+    .prev, .next {
+        font-size: 1.6rem;
+    }
+
+    .dots {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust layout for very small screens (e.g. phones) */
+@media (max-width: 480px) {
+    .testimonial-right {
+        width: 100%; /* Full width */
+        padding-left: 10px;
+    }
+
+    blockquote p {
+        font-size: 1.1rem; /* Further decrease font size */
+    }
+
+    .author-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .author-details h4 {
+        font-size: 0.9rem;
+    }
+
+    .author-details p {
+        font-size: 0.75rem;
+    }
+
+    .star {
+        font-size: 1rem;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+    }
+
+    .dots {
+        font-size: 0.8rem;
+    }
+}
+
+
+.clients-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #000;
+}
+
+.clients-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-top: 100px; /* Adjust the value as needed */
+    
+}
+
+.global {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo {
+    filter: brightness(0) invert(1); /* Make the logo white */
+    max-width: 120px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 1;
+    color: white; /* This is unnecessary for images; remove if using logos */
+}
+
+
+.footer {
+    background-color: #0d1a26;
+    background-image: linear-gradient(rgb(22, 22, 22) 2px, transparent 1px), 
+                      linear-gradient(90deg, rgb(22, 22, 22) 2px, transparent 1px);
+    background-size: 68px 70px; /* Size of the grid squares */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+}
+.contact-info .logo-img{
+    width: 60%;
+}
+.contact-info h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.contact-info .profile-img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-info .phone-number {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2cc593;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.quick-links, .services {
+    flex: 1;
+}
+
+.quick-links ul, .services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links li, .services li {
+    margin-bottom: 10px;
+}
+
+.quick-links a, .services a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover, .services a:hover {
+    color: #2cc593;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2cc593;
+}
